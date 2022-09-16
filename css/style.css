@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/mir4.jpg');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #fafbfc;
+}
+
+header {
+    background-color: blueviolet;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background: #82008244;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+header img {
+    width: 250px;
+}
+
+main {
+    text-align: center;
+    padding: 30px 50px;
+}
+main h2 {
+    color: #fff;
+}
+
+.card {
+    margin: auto;
+    max-width: 40vw;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: left;
+    background: #82008244;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.lineInput {
+    display: grid;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+
+button {
+    border: 0px;
+    padding: 10px;
+    outline: 0;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+button:hover {
+    background-color: rgb(84, 25, 139);
+}
+
+.content {
+    margin-top: 15px;
+}
+
+table {
+    background-color: #fff;
+    margin: auto;
+    width: 42vw;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+table th, td {
+    text-align: left;
+    padding: 1px 5px;
+}
+
+table td img {
+    width: 22px;
+    padding: 3px;
+}
+
+.api-google {
+    width: 42vw;
+    margin: auto;
+    padding: 30px;
+}
+
+#null {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width: 599px) {
+.card {
+    max-width: 80vw;
+}
+
+table {
+    width: 52vw;
+}
+
+}

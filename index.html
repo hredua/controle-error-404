@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Players</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/script1.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <img src="assets/error-404-pq-bran.webp" alt="">
+    </header>
+
+    <main>
+        <div class="title">
+            <h2>CONTROLE DE PROGRESSÃO DE PERSONAGEM</h2>
+        </div>
+
+        <div class="card">
+            <div id="null" class="lineInput">
+                <label>ID</label>
+                <input type="text" id="idReceived" name="idReceived" placeholder="Nome do personagem">
+            </div>
+            <div class="lineInput">
+                <label>Player</label>
+                <input type="text" id="personagem" name="personagem" placeholder="Nome do personagem">
+            </div>
+
+            <div class="lineInput">
+                <label>Level</label>
+                <input type="number" id="level" name="level" placeholder="Level do personagem">
+            </div>
+
+            <div class="lineInput">
+                <label>Power</label>
+                <input type="number" id="power" name="power" placeholder="Power do personagem">
+            </div>
+
+            <div class="lineInput">
+                <label>Codex</label>
+                <input type="number" id="codex" name="codex" placeholder="Codex do personagem">
+            </div>
+            
+            <button onclick="player.salvar()" id="btn1">Salvar</button>
+            <button onclick="player.cancelar()">Cancelar</button>
+        </div>
+
+        <form class="content">
+            <table border="1">
+                <thead>
+                    <th id="null">ID</th>
+                    <th>Player</th>
+                    <th>Level</th>
+                    <th>Power</th>
+                    <th>Codex</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody id="tbody">
+                    
+                </script>
+                </tbody>
+            </table>
+        </form>
+
+
+    </main>
+
+    
+</body>
+</html>
