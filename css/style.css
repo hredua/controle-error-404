@@ -28,6 +28,25 @@ header img {
     width: 250px;
 }
 
+#nav {
+    margin-top: -25px;
+    margin-right: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+
+a {
+    color: #fafbfc;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+a:hover {
+    color: #ce8dcee3;
+}
+
 main {
     text-align: center;
     padding: 30px 50px;
@@ -36,9 +55,8 @@ main h2 {
     color: #fff;
 }
 
-.card {
+.card, .cardLogin {
     margin: auto;
-    max-width: 40vw;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;
@@ -51,6 +69,21 @@ main h2 {
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card {
+    max-width: 40vw;
+}
+
+.cardLogin {
+    max-width: 20vw;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 .lineInput {
@@ -81,8 +114,17 @@ button:hover {
     background-color: rgb(84, 25, 139);
 }
 
-.content {
+.content, .contentRanking {
     margin-top: 15px;
+}
+
+.contentRanking {
+    background: #82008244;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 10px solid rgba(31, 38, 135, 0.192);
 }
 
 table {
@@ -108,11 +150,47 @@ table td img {
     padding: 3px;
 }
 
-.api-google {
-    width: 42vw;
-    margin: auto;
-    padding: 30px;
+.rankCodex tr:nth-child(1){
+	background:#f1df95;
 }
+.rankCodex tr:nth-child(2){
+	background:#f1df95;
+}
+.rankCodex tr:nth-child(3){
+	background:#f1df95;
+}
+.rankLevel tr:nth-child(1){
+	background:#f1df95;
+}
+.rankLevel tr:nth-child(2){
+	background:#f1df95;
+}
+.rankLevel tr:nth-child(3){
+	background:#f1df95;
+}
+.rankPower tr:nth-child(1){
+	background:#f1df95;
+}
+.rankPower tr:nth-child(2){
+	background:#f1df95;
+}
+.rankPower tr:nth-child(3){
+	background:#f1df95;
+}
+
+.rankTable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rankCodex, .rankLevel, .rankPower {
+    width: 15vw;
+    
+}
+
 
 #null {
     display: none;
@@ -122,13 +200,30 @@ table td img {
     text-align: center;
 }
 
+#msgError {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
 @media (max-width: 599px) {
-.card {
+.card, .cardLogin {
     max-width: 80vw;
 }
 
 table {
-    width: 52vw;
+    width: 20px;
+}
+
+#nav {
+    margin-top: 0;
+    margin-right: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 }

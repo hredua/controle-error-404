@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR 404 - Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="./index.html"><img src="assets/error-404-pq-bran.webp"></a>
+    </header>
+
+    <main>
+        <div class="cardLogin">
+            <h2 class="center">ENTRAR</h2>
+            <div id="msgError"></div>
+            <div class="lineInput">
+                <label>Nome de usuário</label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Insira o nome do usuário">
+            </div>
+            <div class="lineInput">
+                <label>Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Insira a senha">
+            </div>
+            <div class="buttons">
+                <button onclick="entrar()" id="btn2">Entrar</button>
+            <button onclick="cancelar()">Cancelar</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
