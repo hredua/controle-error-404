@@ -83,7 +83,7 @@ usuario = () => {
     logado.innerHTML = `Olá, ${usuarioLogado.nome}`
     entraSai.innerHTML = 'Sair'
     logado.addEventListener('click', () => {
-      window.location.href = "../admin.html"
+      window.location.href = "./admin.html"
     })
   }
   if(entraSai.text == 'Sair'){

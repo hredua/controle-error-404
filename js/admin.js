@@ -1,6 +1,6 @@
 if(localStorage.getItem('token') == null){
     alert('Você precisa estar logado para acessar essa página')
-    window.location.href = "../index.html"
+    window.location.href = "./index.html"
 }
 window.onload=() => {
     let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'))
@@ -191,4 +191,5 @@ var player = new Player();
 function sair() {
     localStorage.removeItem('token')
     localStorage.removeItem('usuarioLogado')
+    window.location.href = "./index.html"
 }

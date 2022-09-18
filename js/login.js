@@ -30,7 +30,7 @@ async function entrar() {
         })
     
         if(nomeUsuario.value == validaUsuario.nomeUsuario && senha.value == validaUsuario.senha){
-            window.location.href = "../admin.html"
+            window.location.href = "./admin.html"
 
             let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
             console.log(token)
