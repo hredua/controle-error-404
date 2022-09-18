@@ -88,7 +88,7 @@ usuario = () => {
   }
   if(entraSai.text == 'Sair'){
     entraSai.addEventListener('click', () => {
-      window.location.href = "../index.html"
+      window.location.href = "./index.html"
       localStorage.removeItem('token')
       localStorage.removeItem('usuarioLogado')
     } )
