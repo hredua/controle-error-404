@@ -98,7 +98,6 @@ usuario = () => {
 
 window.onload= () => {
 
-
   rankingCodex()
   rankingLevel()
   rankingPower()

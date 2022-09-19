@@ -47,6 +47,18 @@ a:hover {
     color: #ce8dcee3;
 }
 
+#banner a{
+ display: flex;
+ justify-content: center;
+ margin-top: 3%;
+}
+
+#banner img {
+    border-radius: 4px;
+    box-shadow: 5px 5px 14px black;
+    width: 40%;
+}
+
 main {
     text-align: center;
     padding: 30px 50px;
@@ -183,11 +195,11 @@ table td img {
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 }
 
 .rankCodex, .rankLevel, .rankPower {
-    width: 15vw;
+    width: 18vw;
     
 }
 
@@ -224,6 +236,10 @@ table {
     display: flex;
     gap: 10px;
     justify-content: center;
+}
+
+#banner img{
+    width: 90%;
 }
 
 }
