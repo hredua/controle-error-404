@@ -91,6 +91,7 @@ usuario = () => {
       window.location.href = "./index.html"
       localStorage.removeItem('token')
       localStorage.removeItem('usuarioLogado')
+      localStorage.removeItem('id')
     } )
 
   }

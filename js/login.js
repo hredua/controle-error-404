@@ -1,5 +1,5 @@
-window.onload=() => {}
-
+window.onload=() => {
+}
 function cancelar() {
     document.getElementById('nomeUsuario').value = '';
     document.getElementById('senha').value = '';
@@ -8,46 +8,60 @@ function cancelar() {
 
 async function entrar() {
     if(this.validaCampos() == true) {
-        const response = await fetch('https://api-error404.herokuapp.com/usuario')
-        let listaUsuario = await response.json()
-        let nomeUsuario = document.querySelector('#nomeUsuario')
-        let senha = document.querySelector('#senha')
-        let msgError = document.querySelector('#msgError')
-        let validaUsuario = {
-            nome: '',
-            nomeUsuario: '',
-            senha: ''
+        let personagem = {
+            "nomePersonagem": document.getElementById('nomeUsuario').value,
+            "senha": document.getElementById('senha').value
+
         }
-    
-        listaUsuario.forEach((item) => {
-            if(nomeUsuario.value == item.nomeUsuario && senha.value == item.senha){
-                validaUsuario = {
-                    nome: item.nome,
-                    nomeUsuario: item.nomeUsuario,
-                    senha: item.senha
-                }
+        var requestOptions = {
+            method: 'post',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(personagem)
+        }
+            const response = await fetch('https://api-error-404.herokuapp.com/auth/login/', requestOptions)
+            const dados = await response.json()
+            if(dados.token){
+                localStorage.setItem('token', dados.token)
+            localStorage.setItem('id', dados.id)
             }
-        })
-    
-        if(nomeUsuario.value == validaUsuario.nomeUsuario && senha.value == validaUsuario.senha){
-            window.location.href = "./admin.html"
+            
+    }
+    logado()
+}
 
-            let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
-            console.log(token)
-            localStorage.setItem('token', token)
+async function logado() {
+    let token = localStorage.getItem('token')
+    let id = localStorage.getItem('id')
+    if(token) {
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${token}`);
 
-            localStorage.setItem('usuarioLogado', JSON.stringify(validaUsuario))
+        var requestOptions = {
+        method: 'get',
+        headers: myHeaders,
+        redirect: 'follow'
+        };
+        const response = await fetch(`https://api-error-404.herokuapp.com/user/${id}`, requestOptions)
+        let dados = await response.json()
+        let usuario = {
+            nome: dados.user.nome,
+            nomePersonagem: dados.user.nomePersonagem
         }
-        else{
-            msgError.setAttribute('style', 'display: block')
+        console.log(usuario)
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
+        window.location.href = "./admin.html"
+    } else {
+        msgError.setAttribute('style', 'display: block')
             msgError.innerHTML = 'Usuário ou senha incorretos'
             nomeUsuario.focus()
-        }
-    
-        cancelar()
     }
-   
 }
+
+
+   
 
 function validaCampos() {
     let nomeUsuario = document.querySelector('#nomeUsuario')
