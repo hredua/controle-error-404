@@ -20,22 +20,24 @@
     </header>
 
     <main>
-        <div class="cardLogin">
-            <h2 class="center">ENTRAR</h2>
-            <div id="msgError"></div>
-            <div class="lineInput">
-                <label>Nome de usuário</label>
-                <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Insira o nome do usuário">
+        <div id="login">
+            <div class="cardLogin">
+                <h2 class="center">ENTRAR</h2>
+                <div id="msgError"></div>
+                <div class="lineInput">
+                    <label>Nome de usuário</label>
+                    <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Insira o nome do usuário">
+                </div>
+                <div class="lineInput">
+                    <label>Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Insira a senha">
+                </div>
+                <div class="buttons">
+                    <button onclick="entrar()" id="btn2">Entrar</button>
+                <button onclick="cancelar()">Cancelar</button>
+                </div>
             </div>
-            <div class="lineInput">
-                <label>Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Insira a senha">
-            </div>
-            <div class="buttons">
-                <button onclick="entrar()" id="btn2">Entrar</button>
-            <button onclick="cancelar()">Cancelar</button>
-            </div>
-        </div>
+         </div>
     </main>
 
 </body>

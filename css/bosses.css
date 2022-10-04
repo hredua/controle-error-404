@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/gold-cave-wallpaper.jpg');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #fafbfc;
+}
+
+h1 {
+    color: #fafbfc;
+}
+
+#bosses {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 1000px;
+    background: #82008244;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+
+#bosses img {
+    width: 105px;
+    height: 105px;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+#foxImg:hover, #deamonImg:hover, #hellImg:hover, #redmoonImg:hover, #abominationImg:hover, #dragonImg:hover, #azureImg:hover  {
+    transform: scale(1.2);
+   cursor: pointer;
+}
+
+p {
+    color: white;
+    height: bold;
+    font-size: 1.1em;
+}
+
+#bosses .gold, #totalGold .gold {
+    width: 32px;
+    height: 32px;
+}
+
+#costFox, #costDeamon, #costHell, #costMoon, #costAbomination, #costDragon, #costAzure {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+#costFox:hover, #costDeamon:hover, #costHell:hover, #costMoon:hover, #costAbomination:hover, #costDragon:hover, #costAzure:hover {
+    background-color:#800180;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#resoucers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 600px;
+    background: #ffffff00;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+}
+
+#resoucers p {
+    margin-top: 17px;
+}
+
+#displayTotal, .totalResoucers {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#totalGold, #totalCooper, #totalEnergy, #totalDarkstell, #totalStatues {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#totalValue, #totalValueCooper {
+    display: flex;
+    gap: 10px;
+}
+
+#total, #totalCoop, #totalEner, #totalDS, #totalStat {
+    max-width: 70px;
+    text-align: center;
+}
+
+#donationControl {
+    margin-top: 50px;
+}
+
+.contentDonation h2 {
+    margin-bottom: 10px;
+}
+
+.donation {
+    width: 50px;
+}
+
+@media (max-width: 599px) {
+    #bosses img {
+        width: 60px;
+        height: 60px;
+    }
+    #bosses .gold, #totalGold .gold {
+        width: 16px;
+        height: 16px;
+    }
+    div p {
+        font-size: .8em;
+    }
+}

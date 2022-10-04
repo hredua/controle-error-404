@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Expedição</title>
+    <link rel="stylesheet" href="./css/bosses.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="./js/calculadora.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="./index.html"> <img src="assets/error-404-pq-bran.webp"></a>
+        <div id="nav">
+            <div id="menu">
+                <a href="./control-expedition.html">Calculadora de Expedição</a>
+            </div>
+            <div id="dinamicText">
+                <p id="navText"></p>
+                <p>|</p>
+                <a id="entraSai"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Selecione os bosses para expedição</h1>
+        <div id="bosses">
+            <div id="fox">
+                <p>Besta Espirito <br> da Raposa</p>
+                <img id="foxImg" src="./assets/raposa.png" alt="">
+                <div id="costFox">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>1000</p>
+                </div>
+            </div>
+            <div id="deamon">
+                <p>Deus Touro <br> Demoníaco</p>
+                <img id="deamonImg" src="./assets/deamon-bull.png" alt="">
+                <div id="costDeamon">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>1200</p>
+                </div>
+            </div>
+            <div id="hell">
+                <p>Demónio de Pedra <br> Infernal</p>
+                <img id="hellImg" src="./assets/hell-rock.png" alt="">
+                <div id="costHell">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>1400</p>
+                </div>
+            </div>
+            <div id="redmoon">
+                <p>Demónio de Lua <br> Vermelha</p>
+                <img id="redmoonImg" src="./assets/redmoon.png" alt="">
+                <div id="costMoon">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>1600</p>
+                </div>
+            </div>
+            <div id="abomination">
+                <p>Abominação <br> Infernal</p>
+                <img id="abominationImg" src="./assets/infernal-abomination.png" alt="">
+                <div id="costAbomination">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>1800</p>
+                </div>
+            </div>
+            <div id="dragon">
+                <p>Dragão <br> Trovão Azul</p>
+                <img id="dragonImg" src="./assets/dragon.png" alt="">
+                <div id="costDragon">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>2000</p>
+                </div>
+            </div>
+            <div id="azure">
+                <p>Imperador <br> da Chama Azul</p>
+                <img id="azureImg" src="./assets/azure.png" alt="">
+                <div id="costAzure">
+                    <img class="gold" src="./assets/gold.webp" alt="">
+                    <p>2200</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="resoucers">
+            <p>Total:</p>
+            <div id="displayResoucers">
+                <div class="totalResoucers">
+                    <div id="totalCooper">
+                    <img class="ds" src="./assets/cooper.webp">
+                    </div>
+                    <div id="totalValueCooper">
+                        <input id="totalCoop" type="number" readonly>
+                    <button id="cancelResoucers">Cancelar</button>
+                    </div>
+                </div>
+                <div class="totalResoucers">
+                    <div id="totalEnergy">
+                    <img class="ds" src="./assets/energy.webp">
+                    </div>
+                    <div id="totalValueEnergy">
+                        <input id="totalEner" type="number" readonly>
+                    </div>
+                </div>
+                <div class="totalResoucers">
+                    <div id="totalDarkstell">
+                    <img class="ds" src="./assets/darksteel.webp">
+                    </div>
+                    <div id="totalValueDarksteel">
+                        <input id="totalDS" type="number" readonly>
+                    </div>
+                </div>
+                <div class="totalResoucers">
+                    <div id="totalStatues">
+                    <img class="ds" src="./assets/redstatue.webp">
+                    </div>
+                    <div id="totalValueStatues">
+                        <input id="totalStat" type="number" readonly>
+                    </div>
+                </div>
+            </div>
+            <div id="displayTotal">
+                <div id="totalGold">
+                <img class="gold" src="./assets/gold.webp">
+                </div>
+                <div id="totalValue">
+                    <input id="total" type="number" readonly>
+                    <button id="cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+   <!-- <section id="donationControl">
+            <div class="contentDonation">
+                <h2>Controle de doação</h2>
+                <table class="donation" border="1">
+                    <thead>
+                        <th>Player</th>
+                        <th>Doação</th>
+                        <th>Doação Mercado</th>
+                    </thead>
+                    <tbody id="tbodyDonation">    
+                    </tbody>
+                </table>
+            </div>
+        </section> -->
+    </main>
+</body>
+</html>

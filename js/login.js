@@ -15,7 +15,6 @@ async function entrar() {
         }
         var requestOptions = {
             method: 'post',
-            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },

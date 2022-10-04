@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -19,16 +20,20 @@
     <header class="header">
         <img src="assets/error-404-pq-bran.webp"> 
         <div id="nav">
-            <p id="navText"></p>
-            <p>|</p>
-            <a id="entraSai"></a>
+            <div id="menu">
+                <a href="./control-expedition.html">Calculadora de Expedição</a>
+            </div>
+            <div id="dinamicText">
+                <p id="navText"></p>
+                <p>|</p>
+                <a id="entraSai"></a>
+            </div>
         </div>
     </header>
-
-    <span id="banner">
+   <span id="banner">
         <a href="https://discord.gg/ZcYTdm4E6y" target="_blank"><img src="./assets/mirbanner.jpg"></a>
     </span>
-    
+
     <main>
         <div class="rankTable">
             <div class="contentRanking">
@@ -39,8 +44,7 @@
                         <th>Player</th>
                         <th>Codex</th>
                     </thead>
-                    <tbody id="tbodyCodex">
-                        
+                    <tbody id="tbodyCodex">    
                     </tbody>
                 </table>
             </div>
