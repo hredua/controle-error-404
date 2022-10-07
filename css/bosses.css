@@ -38,18 +38,6 @@ h1 {
     height: 105px;
 }
 
-@keyframes zoominoutsinglefeatured {
-    0% {
-        transform: scale(1,1);
-    }
-    50% {
-        transform: scale(1.2,1.2);
-    }
-    100% {
-        transform: scale(1,1);
-    }
-}
-
 #foxImg:hover, #deamonImg:hover, #hellImg:hover, #redmoonImg:hover, #abominationImg:hover, #dragonImg:hover, #azureImg:hover  {
     transform: scale(1.2);
    cursor: pointer;
@@ -102,24 +90,28 @@ p {
     margin-top: 17px;
 }
 
-#displayTotal, .totalResoucers {
+.totalResoucers, .displayTotal, .statues, #displayGold {
     display: flex;
     gap: 5px;
     margin-top: 10px;
+    flex-wrap: wrap;
+}
+.displayTotal {
+    flex-direction: column;
 }
 
-#totalGold, #totalCooper, #totalEnergy, #totalDarkstell, #totalStatues {
+#totalCooper, #totalEnergy, #totalDarkstell, #totalStatues {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#totalValue, #totalValueCooper {
+#totalValueCooper, #totalValue{
     display: flex;
     gap: 10px;
 }
 
-#total, #totalCoop, #totalEner, #totalDS, #totalStat {
+#total, #totalCoop, #totalEner, #totalDS, #totalStat, #statuesGold {
     max-width: 70px;
     text-align: center;
 }

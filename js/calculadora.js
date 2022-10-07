@@ -10,6 +10,14 @@ function goldExpedition () {
     let azure = document.querySelector('#costAzure')
     let total = document.querySelector('#total')
     let cancel = document.querySelector('#cancel')
+    let statues = document.querySelector('#statuesGold')
+    let foxStatuesGold = 0;
+    let deamonStatuesGold = 0;
+    let hellStatuesGold = 0;
+    let moonStatuesGold = 0;
+    let abominationStatuesGold = 0;
+    let dragonStatuesGold = 0;
+    let azureStatuesGold = 0;
     let foxCost = 0;
     let deamonCost = 0;
     let hellCost = 0;
@@ -20,38 +28,59 @@ function goldExpedition () {
 
     fox.addEventListener('click', () => {
         foxCost = 1000;
+        foxStatuesGold = 2;
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         fox.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     deamon.addEventListener('click', () => {
         deamonCost = 1200;
+        deamonStatuesGold = 4;
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         deamon.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     hell.addEventListener('click', () => {
         hellCost = 1400;
+        hellStatuesGold = 6;
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         hell.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     moon.addEventListener('click', () => {
         moonCost = 1600;
+        moonStatuesGold = 8;
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         moon.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     abomination.addEventListener('click', () => {
         abominationCost = 1800;
+        abominationStatuesGold = 10;
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         abomination.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     dragon.addEventListener('click', () => {
         dragonCost = 2000;
+        dragonStatuesGold = 12
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         dragon.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     azure.addEventListener('click', () => {
         azureCost = 2200;
+        azureStatuesGold = 14;
         total.value = foxCost + deamonCost + hellCost + moonCost + abominationCost + dragonCost + azureCost;
+        statues.value = foxStatuesGold + deamonStatuesGold + hellStatuesGold + moonStatuesGold + abominationStatuesGold + dragonStatuesGold + azureStatuesGold;
         azure.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     cancel.addEventListener('click', () => {
         fox.setAttribute('style', 'filter: grayscale(0)')
@@ -68,7 +97,16 @@ function goldExpedition () {
         abominationCost = 0;
         dragonCost = 0;
         azureCost = 0;
+        foxStatuesGold = 0;
+        deamonStatuesGold = 0;
+        hellStatuesGold = 0;
+        moonStatuesGold = 0;
+        abominationStatuesGold = 0;
+        dragonStatuesGold = 0;
+        azureStatuesGold = 0;
         total.value = '';
+        statues.value = '';
+        statuesTotal()
     })
 }
 
@@ -124,6 +162,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         foxDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     deamonDiv.addEventListener('click', () => {
         deamonCooper = 5000;
@@ -135,6 +174,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         deamonDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     hellDiv.addEventListener('click', () => {
         hellCooper = 7500;
@@ -146,6 +186,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         hellDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     moonDiv.addEventListener('click', () => {
         moonCooper = 10000;
@@ -157,6 +198,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         moonDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     abominationDiv.addEventListener('click', () => {
         abominationCooper = 12500;
@@ -168,6 +210,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         abominationDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     dragonDiv.addEventListener('click', () => {
         dragonCooper = 15000;
@@ -179,6 +222,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         dragonDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     azureDiv.addEventListener('click', () => {
         azureCooper = 17500;
@@ -190,6 +234,7 @@ function resourcesExpedition () {
         totalDarksteel.value = foxDarksteel + deamonDarksteel + hellDarksteel + moonDarksteel + abominationDarksteel + dragonDarksteel + azureDarksteel;
         totalStatues.value = foxStatues + deamonStatues + hellStatues + moonStatues + abominationStatues + dragonStatues + azureStatues;
         azureDiv.setAttribute('style', 'filter: grayscale(100%)')
+        statuesTotal()
     })
     cancel.addEventListener('click', () => {
         foxDiv.setAttribute('style', 'filter: grayscale(0)')
@@ -231,34 +276,22 @@ function resourcesExpedition () {
         totalEnergy.value = '';
         totalDarksteel.value = '';
         totalStatues.value = '';
+        statuesTotal()
     })
+    
 }
 
-//async function donation (){
- //   const response = await fetch('https://apirestful-controle-personagem.herokuapp.com/personagem/')
-  //  const dados = await response.json()
-  //  let tbodyDonation = document.getElementById('tbodyDonation');
- //   tbodyDonation.innerText = '';
-  //  let data = dados.sort(function (x, y){
-  //      let a = x.nomePersonagem.toUpperCase(),
- //           b = y.nomePersonagem.toUpperCase();
- //       return a == b ? 0 : a > b ? 1 : -1;
- //   });
- //   data.forEach(personagem => {
- //     let tr = tbodyDonation.insertRow();
- //       let td_personagem = tr.insertCell();
-//        let td_doacao = tr.insertCell();
- //       let td_doacaoMercado = tr.insertCell()
-       
- //       td_personagem.innerText = personagem.nomePersonagem;
-  //      let clan = document.createElement('input');
- //       clan.type = 'checkbox';
- //       let market = document.createElement('input', 'type=checkbox');
-  //      market.type = 'checkbox';
-  //      td_doacao.appendChild(clan);
-  //      td_doacaoMercado.appendChild(market);
-  //  })
- // }
+function statuesTotal() {
+    let resoucesStatues = Number(document.querySelector('#totalStat').value)
+    let goldStatues = Number(document.querySelector('#statuesGold').value)
+    let statues = document.querySelector('#statuesGoldTotal')
+
+    statues.value = resoucesStatues + goldStatues
+}
+
+
+
+
 
 window.onload= () => {
     goldExpedition ()
