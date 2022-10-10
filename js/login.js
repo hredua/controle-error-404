@@ -51,7 +51,7 @@ async function logado() {
         }
         console.log(usuario)
         localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
-        window.location.href = "./admin.html"
+        window.location.href = "./admin"
     } else {
         msgError.setAttribute('style', 'display: block')
             msgError.innerHTML = 'Usuário ou senha incorretos'

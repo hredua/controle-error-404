@@ -77,18 +77,18 @@ usuario = () => {
     logado.innerHTML = 'Olá, Visitante'
     entraSai.innerHTML = "Entrar"
     entraSai.addEventListener('click', () => {
-    window.location.href = "./login.html"
+    window.location.href = "./login"
     })
   } else{
     logado.innerHTML = `Olá, ${usuarioLogado.nome}`
     entraSai.innerHTML = 'Sair'
     logado.addEventListener('click', () => {
-      window.location.href = "./admin.html"
+      window.location.href = "./admin"
     })
   }
   if(entraSai.text == 'Sair'){
     entraSai.addEventListener('click', () => {
-      window.location.href = "./index.html"
+      window.location.href = "./index"
       localStorage.removeItem('token')
       localStorage.removeItem('usuarioLogado')
       localStorage.removeItem('id')
