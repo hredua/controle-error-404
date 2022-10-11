@@ -1,4 +1,5 @@
 import { usuario } from './module/user.js';
+import { menu } from './module/btn-menu.js';
 
 function goldExpedition () {
     let fox = document.querySelector('#costFox')
@@ -297,4 +298,5 @@ window.onload= () => {
     goldExpedition ()
     resourcesExpedition ()
     usuario ()
+    menu()
 }
