@@ -112,7 +112,7 @@ p {
 }
 
 #total, #totalCoop, #totalEner, #totalDS, #totalStat, #statuesGold {
-    max-width: 70px;
+    max-width: 80px;
     text-align: center;
 }
 
@@ -129,11 +129,15 @@ p {
 }
 
 @media (max-width: 599px) {
+    #displayTotal{
+        margin-left: 45px;
+    }
+
     #bosses img {
         width: 60px;
         height: 60px;
     }
-    #bosses .gold, #totalGold .gold {
+    #bosses .gold {
         width: 16px;
         height: 16px;
     }
