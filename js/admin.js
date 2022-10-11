@@ -3,13 +3,33 @@ if(localStorage.getItem('token') == null){
     window.location.href = "./index"
 }
 
+function menu() {
+    const menuSize = '270px';
+  
+    let open = false;
+    
+    document.querySelector('#btnMenu').addEventListener('click', e => {
+        open = !open;
+        toogleMenu()
+    })
+    function toogleMenu() {
+      if(open) {
+          document.querySelector('#menu').style.marginLeft = 0;
+          return;
+      }
+    
+      document.querySelector('#menu').style.marginLeft = `-${menuSize}`
+    }
+    
+  }
+
 window.onload=() => {
     let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'))
 
     let logado = document.querySelector('#navText')
 
     logado.innerText = `Olá, ${usuarioLogado.nome}`
-
+    menu()
 
 }
 var _id = 1
