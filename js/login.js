@@ -22,7 +22,7 @@ async function entrar() {
             },
             body: JSON.stringify(personagem)
         }
-            const response = await fetch('https://api-error-404.herokuapp.com/auth/login/', requestOptions)
+            const response = await fetch('https://api-error-404.vercel.app/auth/login/', requestOptions)
             const dados = await response.json()
             if(dados.token){
                 localStorage.setItem('token', dados.token)
@@ -45,7 +45,7 @@ async function logado() {
         headers: myHeaders,
         redirect: 'follow'
         };
-        const response = await fetch(`https://api-error-404.herokuapp.com/user/${id}`, requestOptions)
+        const response = await fetch(`https://api-error-404.vercel.app/user/${id}`, requestOptions)
         let dados = await response.json()
         let usuario = {
             nome: dados.user.nome,
