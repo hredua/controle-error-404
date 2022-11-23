@@ -56,7 +56,7 @@ class Player {
                     },
                     body: JSON.stringify(personagem)
                 }
-                    const response = await fetch('https://apirestful-controle-personagem.herokuapp.com/personagem/', requestOptions)
+                    const response = await fetch('https://apirestful-controle-personagens.vercel.app/personagem', requestOptions)
                     const dados = await response.json()
             } else {
                 this.atualizar()
@@ -70,7 +70,7 @@ class Player {
     }
 
     async listaTabela() {
-        const response = await fetch('https://apirestful-controle-personagem.herokuapp.com/personagem/')
+        const response = await fetch('https://apirestful-controle-personagens.vercel.app/personagem')
         const dados = await response.json()
         let data = dados.sort(function (x, y){
             let a = x.nomePersonagem.toUpperCase(),
@@ -119,7 +119,7 @@ class Player {
               redirect: 'follow'
               };
 
-              const response = await fetch(`https://apirestful-controle-personagem.herokuapp.com/personagem/${_id}`, requestOptions)
+              const response = await fetch(`https://apirestful-controle-personagens.vercel.app/personagem/${_id}`, requestOptions)
               const dados = await response.json()
               window.setTimeout(function(){location.reload()},1000)
             } )
@@ -149,7 +149,7 @@ class Player {
                     },
                     body: JSON.stringify(personagem)
               };
-    const response = await fetch(`https://apirestful-controle-personagem.herokuapp.com/personagem/${_id}`, requestOptions)
+    const response = await fetch(`https://apirestful-controle-personagens.vercel.app/personagem/${_id}`, requestOptions)
     let dados = await response.json()
 
     }

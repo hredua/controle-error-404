@@ -1,5 +1,5 @@
 rankingCodex = async () => {
-  const response = await fetch('https://apirestful-controle-personagem.herokuapp.com/personagem/')
+  const response = await fetch('https://apirestful-controle-personagens.vercel.app/personagem')
   const dados = await response.json()
   let tbodyCodex = document.getElementById('tbodyCodex');
   let rank = 1;
@@ -21,7 +21,7 @@ rankingCodex = async () => {
 }
 
 rankingLevel = async () => {
-  const response = await fetch('https://apirestful-controle-personagem.herokuapp.com/personagem/')
+  const response = await fetch('https://apirestful-controle-personagens.vercel.app/personagem')
   const dados = await response.json()
   let tbodyLevel = document.getElementById('tbodyLevel');
   let rank = 1;
@@ -43,7 +43,7 @@ rankingLevel = async () => {
 }
 
 rankingPower = async () => {
-  const response = await fetch('https://apirestful-controle-personagem.herokuapp.com/personagem/')
+  const response = await fetch('https://apirestful-controle-personagens.vercel.app/personagem')
   const dados = await response.json()
   let tbodyPower = document.getElementById('tbodyPower');
   let rank = 1;
